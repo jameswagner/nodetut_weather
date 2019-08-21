@@ -12,8 +12,8 @@ const partialsPath = path.join(__dirname, "../views/partials")
 hbs.registerPartials(partialsPath)
 app.get('', (req, res) => {
     res.render('weather', {
-        title: 'Weather app index',
-        name: 'Andrew Mead'
+        title: 'Weather app',
+        name: 'James Wagner'
     });
 });
 
