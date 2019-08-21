@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const hbs = require('hbs');
 const weather = require('./weather.js');
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, '../public')));
@@ -28,4 +29,5 @@ app.get('/weather', (req, res) => {
 app.get('*', (req, res) => {
     res.send("404");
 })
-app.listen(3000, () => {console.log('Server is up on 3000')})
+
+app.listen(port, () => {console.log('Server is up on ' + port)})
